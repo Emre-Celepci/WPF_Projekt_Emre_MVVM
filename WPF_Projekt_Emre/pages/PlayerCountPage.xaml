@@ -1,0 +1,52 @@
+﻿<Page x:Class="WPF_Projekt_Emre.pages.PlayerCountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:conv="clr-namespace:WPF_Projekt_Emre.Converters"
+      Title="PlayerCountPage">
+
+    <Page.Resources>
+        <conv:PlayerCountToBooleanConverter x:Key="PlayerCountConverter"/>
+    </Page.Resources>
+
+    <Page.Background>
+        <ImageBrush ImageSource="/assets/Images/Layout/Background.png"/>
+    </Page.Background>
+
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#AAFFFFFF"
+                Margin="20">
+
+        <TextBlock Text="Spieleranzahl wählen"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel>
+            <RadioButton Content="2 Spieler"
+                         GroupName="PlayerCount"
+                         IsChecked="{Binding SelectedPlayerCount, Converter={StaticResource PlayerCountConverter}, ConverterParameter=2}"/>
+
+            <RadioButton Content="3 Spieler"
+                         GroupName="PlayerCount"
+                         IsChecked="{Binding SelectedPlayerCount, Converter={StaticResource PlayerCountConverter}, ConverterParameter=3}"/>
+
+            <RadioButton Content="4 Spieler"
+                         GroupName="PlayerCount"
+                         IsChecked="{Binding SelectedPlayerCount, Converter={StaticResource PlayerCountConverter}, ConverterParameter=4}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,0">
+
+            <Button Content="Zurück"
+                    Command="{Binding BackCommand}"
+                    Margin="10"/>
+
+            <Button Content="Weiter"
+                    Command="{Binding NextCommand}"
+                    Margin="10"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

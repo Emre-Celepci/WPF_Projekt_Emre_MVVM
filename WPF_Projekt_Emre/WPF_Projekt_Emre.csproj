@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="assets\Images\Figures\Archer.png" />
+    <None Remove="assets\Images\Figures\Dragon.png" />
+    <None Remove="assets\Images\Figures\Knight.png" />
+    <None Remove="assets\Images\Figures\Mage.png" />
+    <None Remove="assets\Images\Layout\Background.png" />
+    <None Remove="assets\Images\Layout\BackgroundPLayerConfig.png" />
+    <None Remove="assets\Images\Layout\Field\DiceAgainField.png" />
+    <None Remove="assets\Images\Layout\Field\NormalField.png" />
+    <None Remove="assets\Images\Layout\Field\RandomField.png" />
+    <None Remove="assets\Images\Layout\Field\RoundSetOutField.png" />
+    <None Remove="assets\Images\Layout\Field\ScoreMinusField.png" />
+    <None Remove="assets\Images\Layout\Field\ScorePLusField.png" />
+    <None Remove="assets\Images\Layout\Field\StartField.png" />
+    <None Remove="assets\Images\Layout\GameBoard.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assets\Images\Dice\dice5.png" />
+    <Resource Include="assets\Images\Dice\dice4.png" />
+    <Resource Include="assets\Images\Dice\dice1.png" />
+    <Resource Include="assets\Images\Dice\dice6.png" />
+    <Resource Include="assets\Images\Dice\dice3.png" />
+    <Resource Include="assets\Images\Dice\dice2.png" />
+    <Resource Include="assets\Images\Figures\Archer.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Images\Figures\Dragon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Images\Figures\Knight.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Images\Figures\Mage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Images\Layout\Field\DiceAgainField.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient.SNI.runtime" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="assets\Sounds\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assets\Images\Layout\Background.png" />
+    <Resource Include="assets\Images\Layout\BackgroundPLayerConfig.png" />
+    <Resource Include="assets\Images\Layout\Field\NormalField.png" />
+    <Resource Include="assets\Images\Layout\Field\RandomField.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Images\Layout\Field\RoundSetOutField.png" />
+    <Resource Include="assets\Images\Layout\Field\ScoreMinusField.png" />
+    <Resource Include="assets\Images\Layout\Field\ScorePLusField.png" />
+    <Resource Include="assets\Images\Layout\Field\StartField.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Images\Layout\GameBoard.png" />
+  </ItemGroup>
+
+</Project>
